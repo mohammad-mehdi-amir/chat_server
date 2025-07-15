@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #cont {
+            height: 300px;
+            resize: none;
+
+            text-align: center;
+        }
+
+        #username {
+            direction: rtl;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+
+        #cont a {
+            margin-top: 10px;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="cont" class="container py-5 shadow" style="justify-self:flex-start; padding: 20px;margin: 20px;">
+        <h3>برای وارد شدن به چت دکمه زیر را فشار دهید</h3>
+        <input id="username" type="text" class="form-control" placeholder="نام کاربری">
+        <a id="enter-chat" href="#" class="btn btn-primary">وارد شدن به گروه</a>
+    </div>
+    </div>
+    <script>
+        const enterButton = document.getElementById('enter-chat');
+        enterButton.onclick = function (e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            if (!username) {
+                alert("لطفا نام کاربری را وارد کنید!");
+                return;
+            }
+            window.location.href = "/chat/?username=" + encodeURIComponent(username);
+        };
+    </script>
+</body>
+
+</html>
