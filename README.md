@@ -36,24 +36,24 @@ This is a real-time chat application built with **Django**, **Django Channels**,
 
 ## 🛠️ Installation
 
-### Clone the repository
+Clone the repository
 
 ```bash
 git clone <your-repo-url>
 cd project_2
 ```
-###Create and activate a virtual environment
+Create and activate a virtual environment
 ```bash
 python -m venv venv
 source venv/bin/activate
 ```
 
-###Install dependencies
+Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-###Make sure you have Redis installed and running:
+Make sure you have Redis installed and running:
 ```bash
 brew install redis
 brew services start redis
@@ -61,35 +61,16 @@ brew services start redis
 redis-server
 ```
 
-##⚡ Run the server
+⚡ Run the server
 ```bash
 python manage.py migrate
 python manage.py runserver
 ```
-##🌐 Access the app
+🌐 Access the app
 
 Go to http://127.0.0.1:8000/ and enter a username to start chatting!
 
-##🏗️ Project Structure
-
-project_2/
-├── chat/
-│   ├── consumers.py
-│   ├── templates/
-│   │   └── chat/
-│   │       ├── home.html
-│   │       └── chat.html
-│   ├── routing.py
-│   └── ...
-├── config/
-│   ├── asgi.py
-│   ├── settings.py
-│   └── ...
-├── manage.py
-├── requirements.txt
-└── chat_log.txt  ← stores activity logs
-
-##🛡️ License
+🛡️ License
 
 This project is open-source and free to use.
 
