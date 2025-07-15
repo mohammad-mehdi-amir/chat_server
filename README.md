@@ -39,7 +39,7 @@ This is a real-time chat application built with **Django**, **Django Channels**,
 Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/mohammad-mehdi-amir/chat_server.git
 cd project_2
 ```
 Create and activate a virtual environment
